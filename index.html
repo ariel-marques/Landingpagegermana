@@ -1,15 +1,253 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Psicoterapeuta</title>
+    <meta
+      name="description"
+      content="Psicoterapia com abordagem integrativa e acolhedora para ansiedade, autoestima e transições de vida."
+    />
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Landing page psicoterapeuta</title>
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header fixed-top border-bottom">
+      <nav class="navbar navbar-expand-lg bg-white bg-opacity-95" aria-label="Navegação principal">
+        <div class="container">
+          <a class="navbar-brand site-brand" href="#inicio">
+            <span class="site-brand__primary">Germanda</span>
+            <span class="site-brand__secondary">d'Orsi</span>
+          </a>
+
+          <button class="navbar-toggler" type="button" aria-label="Abrir menu" data-mobile-toggle>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+              <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+              <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+              <li class="nav-item"><a class="nav-link" href="#como-funciona">Como Funciona</a></li>
+              <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+              <li class="nav-item ms-lg-2">
+                <a
+                  class="btn btn-brand"
+                  href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20conversa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Agendar Conversa
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero-section section-offset">
+        <div class="hero-section__bg" role="img" aria-label="Terapia acolhedora"></div>
+        <div class="container position-relative">
+          <div class="row min-vh-100 align-items-center py-5">
+            <div class="col-lg-7">
+              <h1 class="display-4 hero-section__title mb-4">
+                Psicoterapia com <span class="text-primary-brand">acolhimento</span> e
+                <span class="text-secondary-brand">cuidado</span>
+              </h1>
+              <p class="lead text-muted mb-4">
+                Um espaço seguro para trabalhar ansiedade, esgotamento emocional, autoestima e fases de transição.
+              </p>
+              <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
+                <a
+                  class="btn btn-brand btn-lg"
+                  href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20conversa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Agendar uma Conversa
+                </a>
+                <a class="btn btn-outline-brand btn-lg" href="#servicos">Conhecer os Serviços</a>
+              </div>
+              <ul class="hero-list list-unstyled d-flex flex-wrap gap-3 gap-lg-4 mb-0">
+                <li>✓ Atendimento online</li>
+                <li>✓ Sigiloso e acolhedor</li>
+                <li>✓ No seu ritmo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="py-5 bg-light-subtle">
+        <div class="container py-lg-5">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-6">
+              <img
+                src="https://images.unsplash.com/photo-1764192114257-ae9ecf97eb6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                alt="Germanda d'Orsi"
+                class="img-fluid rounded-4 shadow"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h2 class="section-title mb-4">Sobre Germanda d'Orsi</h2>
+              <p class="text-muted">Psicóloga e terapeuta com abordagem integrativa, dedicada ao cuidado emocional com acolhimento e respeito.</p>
+              <div class="row g-3 mt-2">
+                <div class="col-sm-6"><div class="feature-card p-3 h-100"><h3>Acolhimento</h3><p>Espaço seguro e sem julgamentos.</p></div></div>
+                <div class="col-sm-6"><div class="feature-card p-3 h-100"><h3>Respeito ao processo</h3><p>Cada pessoa tem seu tempo.</p></div></div>
+                <div class="col-sm-6"><div class="feature-card p-3 h-100"><h3>Abordagem integrativa</h3><p>Ciência e práticas complementares.</p></div></div>
+                <div class="col-sm-6"><div class="feature-card p-3 h-100"><h3>Sigilo profissional</h3><p>Ética e confidencialidade total.</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="py-5">
+        <div class="container py-lg-5">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Features / Serviços</h2>
+            <p class="text-muted">Psicoterapia e práticas integrativas para apoiar seu processo.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-xl-4"><article class="service-card h-100 p-4"><h3>Psicoterapia Individual</h3><p>Autoconhecimento, ansiedade, autoestima e relações.</p></article></div>
+            <div class="col-md-6 col-xl-4"><article class="service-card h-100 p-4"><h3>Reiki</h3><p>Canalização de energia para equilíbrio físico e emocional.</p></article></div>
+            <div class="col-md-6 col-xl-4"><article class="service-card h-100 p-4"><h3>Florais</h3><p>Apoio natural para questões emocionais.</p></article></div>
+            <div class="col-md-6 col-xl-4"><article class="service-card h-100 p-4"><h3>Cromoterapia</h3><p>Harmonização energética com uso terapêutico das cores.</p></article></div>
+            <div class="col-md-6 col-xl-4"><article class="service-card h-100 p-4"><h3>Radiestesia</h3><p>Identificação e harmonização de desequilíbrios energéticos.</p></article></div>
+            <div class="col-md-6 col-xl-4"><article class="service-card h-100 p-4"><h3>Humanoterapia</h3><p>Integração corpo, mente e emoções.</p></article></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="py-5 bg-light-subtle">
+        <div class="container py-lg-5">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Pricing / Investimento</h2>
+            <p class="text-muted">Valores detalhados informados no primeiro contato.</p>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <article class="pricing-card p-4 h-100">
+                <h3>Psicoterapia</h3>
+                <p class="pricing-card__meta">50 minutos · Online ou presencial</p>
+                <ul class="list-unstyled mb-4">
+                  <li>✓ Frequência semanal/quinzenal</li>
+                  <li>✓ Processo personalizado</li>
+                  <li>✓ Acompanhamento contínuo</li>
+                </ul>
+                <a href="#contato" class="btn btn-outline-brand w-100">Solicitar valores</a>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="pricing-card p-4 h-100 pricing-card--featured">
+                <h3>Práticas Integrativas</h3>
+                <p class="pricing-card__meta">40–90 minutos · Modalidade conforme prática</p>
+                <ul class="list-unstyled mb-4">
+                  <li>✓ Reiki, Florais, Cromoterapia</li>
+                  <li>✓ Planos avulsos ou pacotes</li>
+                  <li>✓ Complementar à psicoterapia</li>
+                </ul>
+                <a href="#contato" class="btn btn-brand w-100">Quero saber mais</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="py-5">
+        <div class="container py-lg-5">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Como Funciona</h2>
+            <p class="text-muted">Do primeiro contato ao acompanhamento contínuo.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6"><div class="step-card p-4 h-100"><span class="step-card__number">01</span><h3>Primeiro contato</h3><p>Conversa inicial pelo WhatsApp ou formulário.</p></div></div>
+            <div class="col-md-6"><div class="step-card p-4 h-100"><span class="step-card__number">02</span><h3>Primeira conversa</h3><p>Sessão inicial para entendimento da demanda.</p></div></div>
+            <div class="col-md-6"><div class="step-card p-4 h-100"><span class="step-card__number">03</span><h3>Definição do processo</h3><p>Frequência, formato e objetivos terapêuticos.</p></div></div>
+            <div class="col-md-6"><div class="step-card p-4 h-100"><span class="step-card__number">04</span><h3>Acompanhamento</h3><p>Sessões regulares com ajustes conforme evolução.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="py-5 bg-light-subtle">
+        <div class="container py-lg-5">
+          <div class="text-center mb-5">
+            <h2 class="section-title">FAQ</h2>
+            <p class="text-muted">Perguntas frequentes sobre atendimento e processo terapêutico.</p>
+          </div>
+          <div class="faq-list mx-auto" style="max-width: 900px">
+            <article class="faq-item">
+              <button class="faq-item__trigger" type="button" aria-expanded="false">Como funciona a primeira sessão?</button>
+              <div class="faq-item__content"><p>É um momento de acolhimento para conhecermos sua história e entender se faz sentido iniciarmos o processo.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-item__trigger" type="button" aria-expanded="false">Atendimento online funciona tão bem quanto presencial?</button>
+              <div class="faq-item__content"><p>Sim. A eficácia é equivalente quando há vínculo terapêutico e constância no processo.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-item__trigger" type="button" aria-expanded="false">Quais formas de pagamento são aceitas?</button>
+              <div class="faq-item__content"><p>PIX, transferência e cartão. Também há possibilidade de pacotes mensais.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-item__trigger" type="button" aria-expanded="false">Como funciona cancelamento/remarcação?</button>
+              <div class="faq-item__content"><p>Solicita-se aviso com 24h de antecedência para remarcação sem cobrança.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="py-5">
+        <div class="container py-lg-5">
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-5">
+              <h2 class="section-title mb-3">Contato</h2>
+              <p class="text-muted">Estou aqui para esclarecer dúvidas e iniciar uma conversa sobre seu processo de bem-estar.</p>
+              <ul class="list-unstyled contact-list mt-4">
+                <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
+                <li><strong>E-mail:</strong> contato@germandadorsi.com.br</li>
+                <li><strong>Instagram:</strong> @germanda.dorsi</li>
+                <li><strong>Atendimento:</strong> online e presencial</li>
+              </ul>
+            </div>
+            <div class="col-lg-7">
+              <div class="contact-card p-4 p-lg-5 h-100">
+                <h3 class="h4 mb-3">Fale comigo agora</h3>
+                <p class="text-muted mb-4">O canal mais rápido é o WhatsApp para agendamento e dúvidas iniciais.</p>
+                <div class="d-flex flex-column flex-sm-row gap-3">
+                  <a class="btn btn-brand" href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais" target="_blank" rel="noopener noreferrer">Iniciar conversa</a>
+                  <a class="btn btn-outline-brand" href="mailto:contato@germandadorsi.com.br">Enviar e-mail</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer py-4 border-top bg-light">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+        <p class="mb-0">© <span id="currentYear"></span> Germanda d'Orsi. Todos os direitos reservados.</p>
+        <p class="mb-0 small">CRP XX/XXXXX - Psicóloga</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

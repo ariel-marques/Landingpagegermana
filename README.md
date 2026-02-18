@@ -1,11 +1,42 @@
+# Landing Page Psicoterapeuta (HTML/CSS/JS estático)
 
-  # Landing page psicoterapeuta
+Este projeto foi convertido para uma estrutura estática, sem React/Vite.
 
-  This is a code bundle for Landing page psicoterapeuta. The original project is available at https://www.figma.com/design/BAaMrJawoW78yXV7Ae2Mts/Landing-page-psicoterapeuta.
+## Estrutura
 
-  ## Running the code
+- `index.html`
+- `css/styles.css`
+- `js/main.js`
+- `img/` (imagens locais, se desejar adicionar)
+- `assets/` (arquivos extras)
 
-  Run `npm i` to install the dependencies.
+## Como abrir localmente
 
-  Run `npm run dev` to start the development server.
-  
+Opção 1 (mais simples):
+- Dê duplo clique em `index.html` para abrir no navegador.
+
+Opção 2 (recomendado para testes):
+- Rode um servidor HTTP simples na raiz:
+
+```bash
+python3 -m http.server 8080
+```
+
+- Abra: `http://localhost:8080`
+
+## Como hospedar
+
+Pode hospedar em qualquer serviço de arquivos estáticos, por exemplo:
+- GitHub Pages
+- Netlify
+- Vercel (modo estático)
+- Cloudflare Pages
+
+Basta publicar os arquivos desta raiz (`index.html`, `css`, `js`, `img`, `assets`).
+
+## Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript puro (menu mobile, FAQ accordion, nav ativa)
+- Bootstrap 5.3 (grid e utilitários)
