@@ -57,3 +57,104 @@ const updateActiveNav = () => {
 
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 updateActiveNav();
+
+const initCalmMotion = () => {
+  if (!window.gsap) return;
+
+  const { gsap } = window;
+  const hasScrollTrigger = !!window.ScrollTrigger;
+  if (hasScrollTrigger) gsap.registerPlugin(window.ScrollTrigger);
+
+  const baseEase = 'power2.out';
+
+  gsap.from('[data-animate="title"]', {
+    y: 16,
+    opacity: 0,
+    duration: 0.75,
+    ease: baseEase,
+    stagger: 0.08,
+    scrollTrigger: hasScrollTrigger
+      ? {
+          trigger: '[data-animate="title"]',
+          start: 'top 88%',
+          once: true,
+        }
+      : undefined,
+  });
+
+  gsap.from('[data-animate="fade"]', {
+    y: 12,
+    opacity: 0,
+    duration: 0.65,
+    ease: baseEase,
+    stagger: 0.07,
+    scrollTrigger: hasScrollTrigger
+      ? {
+          trigger: '[data-animate="fade"]',
+          start: 'top 90%',
+          once: true,
+        }
+      : undefined,
+  });
+
+  gsap.utils.toArray('[data-animate="card"]').forEach((card, index) => {
+    gsap.from(card, {
+      y: 22,
+      opacity: 0,
+      duration: 0.8,
+      delay: (index % 3) * 0.05,
+      ease: baseEase,
+      scrollTrigger: hasScrollTrigger
+        ? {
+            trigger: card,
+            start: 'top 90%',
+            once: true,
+          }
+        : undefined,
+    });
+  });
+
+  gsap.utils.toArray('.section-title--animated').forEach((title) => {
+    gsap.to(title, {
+      '--underline-progress': 1,
+      duration: 0.8,
+      ease: 'power1.out',
+      onStart: () => {
+        title.classList.add('is-underlining');
+      },
+      scrollTrigger: hasScrollTrigger
+        ? {
+            trigger: title,
+            start: 'top 88%',
+            once: true,
+          }
+        : undefined,
+    });
+  });
+
+  gsap.utils.toArray('[data-parallax]').forEach((shape, index) => {
+    gsap.to(shape, {
+      yPercent: index % 2 === 0 ? 8 : -8,
+      xPercent: index % 2 === 0 ? -3 : 3,
+      ease: 'none',
+      scrollTrigger: hasScrollTrigger
+        ? {
+            trigger: 'body',
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 1.4,
+          }
+        : undefined,
+    });
+
+    gsap.to(shape, {
+      scale: 1.03,
+      duration: 6,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+    });
+  });
+};
+
+initCalmMotion();
