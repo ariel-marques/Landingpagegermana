@@ -129,7 +129,8 @@ body {
 .pricing-card,
 .step-card,
 .contact-card,
-.faq-item {
+.faq-item,
+.testimonial-card {
   background: #fff;
   border: 1px solid #ececec;
   border-radius: 1rem;
@@ -174,6 +175,23 @@ body {
   line-height: 1;
   margin-bottom: 0.5rem;
   opacity: 0.8;
+}
+
+.testimonial-card {
+  position: relative;
+  border-color: #f3e4d7;
+}
+
+.testimonial-card__quote {
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.testimonial-card__author {
+  font-weight: 600;
+  color: var(--brand-primary);
 }
 
 .faq-item + .faq-item {
