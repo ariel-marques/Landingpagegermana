@@ -142,6 +142,28 @@ body {
   background: linear-gradient(135deg, #fff 0%, #fff7f0 100%);
 }
 
+.service-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.service-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.service-card__content {
+  flex: 1;
+}
+
 .feature-card h3,
 .service-card h3,
 .pricing-card h3,
@@ -255,5 +277,17 @@ body {
 
   .organic-shape {
     opacity: 0.18;
+  }
+}
+
+@media (min-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
