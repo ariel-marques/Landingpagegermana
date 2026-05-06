@@ -156,7 +156,7 @@ body {
 
 .service-card__image {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 10 / 8;
   object-fit: cover;
 }
 
